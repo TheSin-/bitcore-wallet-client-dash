@@ -1,17 +1,17 @@
 {
-  "name": "bitcore-wallet-client-dash",
+  "name": "bitcore-wallet-client-terracoin",
   "main": "index.js",
   "version": "2.1.1",
-  "homepage": "https://github.com/dashpay/bitcore-wallet-client-dash",
+  "homepage": "https://github.com/TheSin-/bitcore-wallet-client-terracoin",
   "authors": ["BitPay Inc"],
-  "description": "Client for bitcore-wallet-service-dash",
+  "description": "Client for bitcore-wallet-service-terracoin",
   "keywords": [
-    "dash",
+    "terracoin",
     "copay-dash",
     "multisig",
     "wallet",
     "client",
-    "bitcore-dash"
+    "bitcore-terracoin"
   ],
   "ignore": [
     "**/.*",

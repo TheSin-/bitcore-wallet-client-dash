@@ -25251,8 +25251,8 @@ var $ = require('preconditions').singleton();
 var util = require('util');
 var async = require('async');
 var events = require('events');
-var Bitcore = require('bitcore-lib-dash');
-var Mnemonic = require('bitcore-mnemonic-dash');
+var Bitcore = require('bitcore-lib-terracoin');
+var Mnemonic = require('bitcore-mnemonic-terracoin');
 var sjcl = require('sjcl');
 var url = require('url');
 var querystring = require('querystring');
@@ -27747,7 +27747,7 @@ API.prototype.createWalletFromOldCopay = function(username, password, blob, cb) 
 module.exports = API;
 
 }).call(this,require("buffer").Buffer)
-},{"../package.json":387,"./common":174,"./credentials":176,"./errors":177,"./log":180,"./paypro":181,"./verifier":182,"async":198,"bip38":203,"bitcore-lib-dash":204,"bitcore-mnemonic-dash":300,"buffer":47,"events":84,"json-stable-stringify":348,"lodash":353,"preconditions":361,"querystring":130,"sjcl":378,"superagent":379,"url":162,"util":167}],172:[function(require,module,exports){
+},{"../package.json":387,"./common":174,"./credentials":176,"./errors":177,"./log":180,"./paypro":181,"./verifier":182,"async":198,"bip38":203,"bitcore-lib-terracoin":204,"bitcore-mnemonic-terracoin":300,"buffer":47,"events":84,"json-stable-stringify":348,"lodash":353,"preconditions":361,"querystring":130,"sjcl":378,"superagent":379,"url":162,"util":167}],172:[function(require,module,exports){
 'use strict';
 
 var Constants = {};
@@ -27827,7 +27827,7 @@ var $ = require('preconditions').singleton();
 var sjcl = require('sjcl');
 var Stringify = require('json-stable-stringify');
 
-var Bitcore = require('bitcore-lib-dash');
+var Bitcore = require('bitcore-lib-terracoin');
 var Address = Bitcore.Address;
 var PrivateKey = Bitcore.PrivateKey;
 var PublicKey = Bitcore.PublicKey;
@@ -28059,15 +28059,15 @@ Utils.buildTx = function(txp) {
 module.exports = Utils;
 
 }).call(this,require("buffer").Buffer)
-},{"./constants":172,"./defaults":173,"bitcore-lib-dash":204,"buffer":47,"json-stable-stringify":348,"lodash":353,"preconditions":361,"sjcl":378}],176:[function(require,module,exports){
+},{"./constants":172,"./defaults":173,"bitcore-lib-terracoin":204,"buffer":47,"json-stable-stringify":348,"lodash":353,"preconditions":361,"sjcl":378}],176:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
 var $ = require('preconditions').singleton();
 var _ = require('lodash');
 
-var Bitcore = require('bitcore-lib-dash');
-var Mnemonic = require('bitcore-mnemonic-dash');
+var Bitcore = require('bitcore-lib-terracoin');
+var Mnemonic = require('bitcore-mnemonic-terracoin');
 var sjcl = require('sjcl');
 
 var Common = require('./common');
@@ -28533,7 +28533,7 @@ Credentials.fromOldCopayWallet = function(w) {
 module.exports = Credentials;
 
 }).call(this,require("buffer").Buffer)
-},{"./common":174,"bitcore-lib-dash":204,"bitcore-mnemonic-dash":300,"buffer":47,"lodash":353,"preconditions":361,"sjcl":378}],177:[function(require,module,exports){
+},{"./common":174,"bitcore-lib-terracoin":204,"bitcore-mnemonic-terracoin":300,"buffer":47,"lodash":353,"preconditions":361,"sjcl":378}],177:[function(require,module,exports){
 'use strict';
 
 var _ = require('lodash');
@@ -28687,9 +28687,9 @@ client.Utils = require('./common/utils');
 client.sjcl = require('sjcl');
 
 // Expose bitcore
-client.Bitcore = require('bitcore-lib-dash');
+client.Bitcore = require('bitcore-lib-terracoin');
 
-},{"./api":171,"./common/utils":175,"./verifier":182,"bitcore-lib-dash":204,"sjcl":378}],180:[function(require,module,exports){
+},{"./api":171,"./common/utils":175,"./verifier":182,"bitcore-lib-terracoin":204,"sjcl":378}],180:[function(require,module,exports){
 var _ = require('lodash');
 
 var DEFAULT_LOG_LEVEL = 'silent';
@@ -28830,8 +28830,8 @@ module.exports = logger;
 (function (process,Buffer){
 var $ = require('preconditions').singleton();
 
-var Bitcore = require('bitcore-lib-dash');
-var BitcorePayPro = require('bitcore-payment-protocol-dash');
+var Bitcore = require('bitcore-lib-terracoin');
+var BitcorePayPro = require('bitcore-payment-protocol-terracoin');
 var PayPro = {};
 
 PayPro._nodeRequest = function(opts, cb) {
@@ -29078,11 +29078,11 @@ PayPro.send = function(opts, cb) {
 module.exports = PayPro;
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":120,"bitcore-lib-dash":204,"bitcore-payment-protocol-dash":311,"buffer":47,"http":156,"https":100,"preconditions":361}],182:[function(require,module,exports){
+},{"_process":120,"bitcore-lib-terracoin":204,"bitcore-payment-protocol-terracoin":311,"buffer":47,"http":156,"https":100,"preconditions":361}],182:[function(require,module,exports){
 var $ = require('preconditions').singleton();
 var _ = require('lodash');
 
-var Bitcore = require('bitcore-lib-dash');
+var Bitcore = require('bitcore-lib-terracoin');
 
 var Common = require('./common');
 var Utils = Common.Utils;
@@ -29284,7 +29284,7 @@ Verifier.checkTxProposal = function(credentials, txp, opts) {
 
 module.exports = Verifier;
 
-},{"./common":174,"./log":180,"bitcore-lib-dash":204,"lodash":353,"preconditions":361}],183:[function(require,module,exports){
+},{"./common":174,"./log":180,"bitcore-lib-terracoin":204,"lodash":353,"preconditions":361}],183:[function(require,module,exports){
 arguments[4][2][0].apply(exports,arguments)
 },{"./asn1/api":184,"./asn1/base":186,"./asn1/constants":190,"./asn1/decoders":192,"./asn1/encoders":195,"bn.js":315,"dup":2}],184:[function(require,module,exports){
 var asn1 = require('../asn1');
@@ -34415,7 +34415,7 @@ module.exports={
         "spec": ">=1.2.0 <2.0.0",
         "type": "range"
       },
-      "F:\\_2017\\Github\\namespace\\Dashevo\\bitcore-wallet-client-dash\\node_modules\\bip38"
+      "F:\\_2017\\Github\\namespace\\TheSin-\\bitcore-wallet-client-terracoin\\node_modules\\bip38"
     ]
   ],
   "_from": "bigi@>=1.2.0 <2.0.0",
@@ -34450,7 +34450,7 @@ module.exports={
   "_shasum": "9c665a95f88b8b08fc05cfd731f561859d725825",
   "_shrinkwrap": null,
   "_spec": "bigi@^1.2.0",
-  "_where": "F:\\_2017\\Github\\namespace\\Dashevo\\bitcore-wallet-client-dash\\node_modules\\bip38",
+  "_where": "F:\\_2017\\Github\\namespace\\TheSin-\\bitcore-wallet-client-terracoin\\node_modules\\bip38",
   "bugs": {
     "url": "https://github.com/cryptocoinjs/bigi/issues"
   },
@@ -38344,7 +38344,7 @@ GovObject.prototype.fromString = function(string) {
 };
 
 /**
- * Retrieve a hexa string that can be used with dashd's CLI interface
+ * Retrieve a hexa string that can be used with terracoind's CLI interface
  *
  * @param {Object} opts allows to skip certain tests. {@see Transaction#serialize}
  * @return {string}
@@ -38469,7 +38469,7 @@ Proposal.prototype.dataHex = function() {
         url: this.url
     };
 
-    // screwy data shims 'til we can fix this on dashd
+    // screwy data shims 'til we can fix this on terracoind
     var inner = ['proposal', _govObj];
     var outer = [ inner ];
 
@@ -39882,18 +39882,16 @@ function removeNetwork(network) {
 addNetwork({
   name: 'livenet',
   alias: 'mainnet',
-  pubkeyhash: 0x4c,
-  privatekey: 0xcc,
-  scripthash: 0x10,
+  pubkeyhash: 0x00,
+  privatekey: 0x80,
+  scripthash: 0x05,
   xpubkey: 0x488b21e,    // 'xpub' (Bitcoin Default)
   xprivkey: 0x488ade4,   // 'xprv' (Bitcoin Default)
-  networkMagic: 0xbf0c6bbd,
-  port: 9999,
+  networkMagic: 0x42babe56,
+  port: 13333,
   dnsSeeds: [
-    'dnsseed.darkcoin.io',
-    'dnsseed.dashdot.io',
-    'dnsseed.masternode.io',
-    'dnsseed.dashpay.io'
+    'seed.terracoin.io',
+    'dnsseed.southofheaven.ca'
   ]
 });
 
@@ -39906,9 +39904,9 @@ var livenet = get('livenet');
 addNetwork({
   name: 'testnet',
   alias: 'regtest',
-  pubkeyhash: 0x8c,
+  pubkeyhash: 0x6f,
   privatekey: 0xef,
-  scripthash: 0x13,
+  scripthash: 0xc4,
   xpubkey: 0x43587cf,     // 'tpub' (Bitcoin Default)
   xprivkey: 0x04358394    // 'tprv' (Bitcoin Default)
 });
@@ -39922,12 +39920,10 @@ var testnet = get('testnet');
 // Add configurable values for testnet/regtest
 
 var TESTNET = {
-  PORT: 19999,
-  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xcee2caff),
+  PORT: 18321,
+  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0x0b110907),
   DNS_SEEDS: [
-    'testnet-seed.darkcoin.io',
-    'testnet-seed.dashdot.io',
-    'test.dnsseed.masternode.io'
+    'test-seed.terracoin.io'
   ]
 };
 
@@ -39938,8 +39934,8 @@ for (var key in TESTNET) {
 }
 
 var REGTEST = {
-  PORT: 19994,
-  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xfcc1b7dc),
+  PORT: 18444,
+  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xfabfb5da),
   DNS_SEEDS: []
 };
 
@@ -46219,7 +46215,7 @@ var Unit = require('./unit');
  * @example
  * ```javascript
  *
- * var uri = new URI('dash:XsV4GHVKGTjQFvwB7c6mYsGV3Mxf7iser6?amount=1.2');
+ * var uri = new URI('terracoin:12pBJgfGV6fzvpMTYyAjL7QHbtncy8pL7s?amount=1.2');
  * console.log(uri.address, uri.amount);
  * ```
  *
@@ -46282,7 +46278,7 @@ URI.fromObject = function fromObject(json) {
  * @example
  * ```javascript
  *
- * var valid = URI.isValid('dash:XsV4GHVKGTjQFvwB7c6mYsGV3Mxf7iser6');
+ * var valid = URI.isValid('terracoin:12pBJgfGV6fzvpMTYyAjL7QHbtncy8pL7s');
  * // true
  * ```
  *
@@ -46309,8 +46305,8 @@ URI.isValid = function(arg, knownParams) {
 URI.parse = function(uri) {
   var info = URL.parse(uri, true);
 
-  if (info.protocol !== 'dash:') {
-    throw new TypeError('Invalid dash URI');
+  if (info.protocol !== 'terracoin:') {
+    throw new TypeError('Invalid terracoin URI');
   }
 
   // workaround to host insensitiveness
@@ -46334,7 +46330,7 @@ URI.prototype._fromObject = function(obj) {
   /* jshint maxcomplexity: 10 */
 
   if (!Address.isValid(obj.address)) {
-    throw new TypeError('Invalid dash address');
+    throw new TypeError('Invalid terracoin address');
   }
 
   this.address = new Address(obj.address);
@@ -46404,7 +46400,7 @@ URI.prototype.toString = function() {
   _.extend(query, this.extras);
 
   return URL.format({
-    protocol: 'dash:',
+    protocol: 'terracoin:',
     host: this.address,
     query: query
   });
@@ -52883,13 +52879,13 @@ module.exports={
         "spec": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
         "type": "remote"
       },
-      "F:\\_2017\\Github\\namespace\\Dashevo\\bitcore-wallet-client-dash\\node_modules\\bitcore-lib-dash"
+      "F:\\_2017\\Github\\namespace\\TheSin-\\bitcore-wallet-client-terracoin\\node_modules\\bitcore-lib-terracoin"
     ]
   ],
   "_from": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
   "_id": "elliptic@3.0.3",
   "_inCache": true,
-  "_location": "/bitcore-lib-dash/elliptic",
+  "_location": "/bitcore-lib-terracoin/elliptic",
   "_phantomChildren": {
     "inherits": "2.0.1"
   },
@@ -52903,13 +52899,13 @@ module.exports={
     "type": "remote"
   },
   "_requiredBy": [
-    "/bitcore-lib-dash"
+    "/bitcore-lib-terracoin"
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
   "_shasum": "865c9b420bfbe55006b9f969f97a0d2c44966595",
   "_shrinkwrap": null,
   "_spec": "elliptic@https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
-  "_where": "F:\\_2017\\Github\\namespace\\Dashevo\\bitcore-wallet-client-dash\\node_modules\\bitcore-lib-dash",
+  "_where": "F:\\_2017\\Github\\namespace\\TheSin-\\bitcore-wallet-client-terracion\\node_modules\\bitcore-lib-terracoin",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -72455,25 +72451,25 @@ module.exports={
   "_args": [
     [
       {
-        "raw": "bitcore-lib-dash@^0.14.3",
+        "raw": "bitcore-lib-terracoin@^0.14.3",
         "scope": null,
-        "escapedName": "bitcore-lib-dash",
-        "name": "bitcore-lib-dash",
+        "escapedName": "bitcore-lib-terracoin",
+        "name": "bitcore-lib-terracoin",
         "rawSpec": "^0.14.3",
         "spec": ">=0.14.3 <0.15.0",
         "type": "range"
       },
-      "F:\\_2017\\Github\\namespace\\Dashevo\\bitcore-wallet-client-dash"
+      "F:\\_2017\\Github\\namespace\\TheSin-\\bitcore-wallet-client-terracoin"
     ]
   ],
-  "_from": "bitcore-lib-dash@>=0.14.3 <0.15.0",
-  "_id": "bitcore-lib-dash@0.14.3",
+  "_from": "bitcore-lib-terracoin@>=0.14.3 <0.15.0",
+  "_id": "bitcore-lib-terracoin@0.14.3",
   "_inCache": true,
-  "_location": "/bitcore-lib-dash",
+  "_location": "/bitcore-lib-terracoin",
   "_nodeVersion": "7.7.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/bitcore-lib-dash-0.14.3.tgz_1502164167016_0.8122289911843836"
+    "tmp": "tmp/bitcore-lib-terracoin-0.14.3.tgz_1502164167016_0.8122289911843836"
   },
   "_npmUser": {
     "name": "alex-werner",
@@ -72482,24 +72478,24 @@ module.exports={
   "_npmVersion": "4.1.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "bitcore-lib-dash@^0.14.3",
+    "raw": "bitcore-lib-terracoin@^0.14.3",
     "scope": null,
-    "escapedName": "bitcore-lib-dash",
-    "name": "bitcore-lib-dash",
+    "escapedName": "bitcore-lib-terracoin",
+    "name": "bitcore-lib-terracoin",
     "rawSpec": "^0.14.3",
     "spec": ">=0.14.3 <0.15.0",
     "type": "range"
   },
   "_requiredBy": [
     "/",
-    "/bitcore-mnemonic-dash",
-    "/bitcore-payment-protocol-dash",
-    "/bitcore-wallet-service-dash"
+    "/bitcore-mnemonic-terracoin",
+    "/bitcore-payment-protocol-terracoin",
+    "/bitcore-wallet-service-terracoin"
   ],
-  "_resolved": "https://registry.npmjs.org/bitcore-lib-dash/-/bitcore-lib-dash-0.14.3.tgz",
+  "_resolved": "https://registry.npmjs.org/bitcore-lib-terracoin/-/bitcore-lib-terracoin-0.14.3.tgz",
   "_shasum": "a785f5e18f4634ee75d9c2b624c65e2bef45bd95",
   "_shrinkwrap": {
-    "name": "bitcore-lib-dash",
+    "name": "bitcore-lib-terracoin",
     "version": "0.14.3",
     "dependencies": {
       "bn.js": {
@@ -72556,8 +72552,8 @@ module.exports={
       }
     }
   },
-  "_spec": "bitcore-lib-dash@^0.14.3",
-  "_where": "F:\\_2017\\Github\\namespace\\Dashevo\\bitcore-wallet-client-dash",
+  "_spec": "bitcore-lib-terracoin@^0.14.3",
+  "_where": "F:\\_2017\\Github\\namespace\\TheSin-\\bitcore-wallet-client-terracoin",
   "author": {
     "name": "BitPay",
     "email": "dev@bitpay.com"
@@ -72566,7 +72562,7 @@ module.exports={
     "request": "browser-request"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/bitcore-lib-dash/issues"
+    "url": "https://github.com/TheSin-/bitcore-lib-terracoin/issues"
   },
   "contributors": [
     {
@@ -72636,9 +72632,9 @@ module.exports={
     "sha512": "=0.0.1",
     "x11-hash-js": "^1.0.0"
   },
-  "description": "A pure and powerful JavaScript Dash library.",
+  "description": "A pure and powerful JavaScript Terracoin library.",
   "devDependencies": {
-    "bitcore-build-dash": "github:dashpay/bitcore-build-dash",
+    "bitcore-build-terracoin": "github:TheSin-/bitcore-build-terracoin",
     "brfs": "^1.2.0",
     "browserify": "latest",
     "chai": "^1.10.0",
@@ -72648,12 +72644,12 @@ module.exports={
   "directories": {},
   "dist": {
     "shasum": "a785f5e18f4634ee75d9c2b624c65e2bef45bd95",
-    "tarball": "https://registry.npmjs.org/bitcore-lib-dash/-/bitcore-lib-dash-0.14.3.tgz"
+    "tarball": "https://registry.npmjs.org/bitcore-lib-terracoin/-/bitcore-lib-terracoin-0.14.3.tgz"
   },
   "gitHead": "570209714dcea77dd306108166d0891ca8736283",
-  "homepage": "https://github.com/dashevo/bitcore-lib-dash",
+  "homepage": "https://github.com/TheSin-/bitcore-lib-terracoin",
   "keywords": [
-    "dash",
+    "terracoin",
     "transaction",
     "address",
     "p2p",
@@ -72680,12 +72676,12 @@ module.exports={
       "email": "ledniknoj@gmail.com"
     }
   ],
-  "name": "bitcore-lib-dash",
+  "name": "bitcore-lib-terracoin",
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dashevo/bitcore-lib-dash.git"
+    "url": "git+https://github.com/TheSin-/bitcore-lib-terracoin.git"
   },
   "scripts": {
     "build": "gulp",
@@ -72717,13 +72713,13 @@ var spec = {
   }]
 };
 
-module.exports = require('bitcore-lib-dash').errors.extend(spec);
+module.exports = require('bitcore-lib-terracoin').errors.extend(spec);
 
-},{"bitcore-lib-dash":204}],302:[function(require,module,exports){
+},{"bitcore-lib-terracoin":204}],302:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var bitcore = require('bitcore-lib-dash');
+var bitcore = require('bitcore-lib-terracoin');
 var BN = bitcore.crypto.BN;
 var unorm = require('unorm');
 var _ = bitcore.deps._;
@@ -73020,7 +73016,7 @@ Mnemonic.bitcore = bitcore;
 module.exports = Mnemonic;
 
 }).call(this,require("buffer").Buffer)
-},{"./errors":301,"./pbkdf2":303,"./words":307,"bitcore-lib-dash":204,"buffer":47,"unorm":386}],303:[function(require,module,exports){
+},{"./errors":301,"./pbkdf2":303,"./words":307,"bitcore-lib-terracoin":204,"buffer":47,"unorm":386}],303:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -73372,7 +73368,7 @@ module.exports = PaymentProtocol;
 (function (Buffer){
 'use strict';
 
-var bitcore = require('bitcore-lib-dash');
+var bitcore = require('bitcore-lib-terracoin');
 var protobufjs = require('protobufjs/dist/protobuf');
 var RootCerts = require('./rootcerts');
 var rfc5280 = require('asn1.js/rfc/5280');
@@ -73866,7 +73862,7 @@ PaymentProtocol.trusted = RootCerts.trusted;
 module.exports = PaymentProtocol;
 
 }).call(this,require("buffer").Buffer)
-},{"./rootcerts":314,"asn1.js/rfc/5280":197,"bitcore-lib-dash":204,"buffer":47,"protobufjs/dist/protobuf":366}],313:[function(require,module,exports){
+},{"./rootcerts":314,"asn1.js/rfc/5280":197,"bitcore-lib-terracoin":204,"buffer":47,"protobufjs/dist/protobuf":366}],313:[function(require,module,exports){
 module.exports={
   "GlobalSign Root CA": "-----BEGIN CERTIFICATE-----\nMIIDdTCCAl2gAwIBAgILBAAAAAABFUtaw5QwDQYJKoZIhvcNAQEFBQAwVzELMAkGA1UEBhMC\nQkUxGTAXBgNVBAoTEEdsb2JhbFNpZ24gbnYtc2ExEDAOBgNVBAsTB1Jvb3QgQ0ExGzAZBgNV\nBAMTEkdsb2JhbFNpZ24gUm9vdCBDQTAeFw05ODA5MDExMjAwMDBaFw0yODAxMjgxMjAwMDBa\nMFcxCzAJBgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMRAwDgYDVQQLEwdS\nb290IENBMRswGQYDVQQDExJHbG9iYWxTaWduIFJvb3QgQ0EwggEiMA0GCSqGSIb3DQEBAQUA\nA4IBDwAwggEKAoIBAQDaDuaZjc6j40+Kfvvxi4Mla+pIH/EqsLmVEQS98GPR4mdmzxzdzxtI\nK+6NiY6arymAZavpxy0Sy6scTHAHoT0KMM0VjU/43dSMUBUc71DuxC73/OlS8pF94G3VNTCO\nXkNz8kHp1Wrjsok6Vjk4bwY8iGlbKk3Fp1S4bInMm/k8yuX9ifUSPJJ4ltbcdG6TRGHRjcdG\nsnUOhugZitVtbNV4FpWi6cgKOOvyJBNPc1STE4U6G7weNLWLBYy5d4ux2x8gkasJU26Qzns3\ndLlwR5EiUWMWea6xrkEmCMgZK9FGqkjWZCrXgzT/LCrBbBlDSgeF59N89iFo7+ryUp9/k5DP\nAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBRg\ne2YaRQ2XyolQL30EzTSo//z9SzANBgkqhkiG9w0BAQUFAAOCAQEA1nPnfE920I2/7LqivjTF\nKDK1fPxsnCwrvQmeU79rXqoRSLblCKOzyj1hTdNGCbM+w6DjY1Ub8rrvrTnhQ7k4o+YviiY7\n76BQVvnGCv04zcQLcFGUl5gE38NflNUVyRRBnMRddWQVDf9VMOyGj/8N7yy5Y0b2qvzfvGn9\nLhJIZJrglfCm7ymPAbEVtQwdpf5pLGkkeB6zpxxxYu7KyJesF12KwvhHhm4qxFYxldBniYUr\n+WymXUadDKqC5JlR3XC321Y9YeRq4VzW9v493kHMB65jUr9TU/Qr6cf9tveCX4XSQRjbgbME\nHMUfpIBvFSDJ3gyICh3WZlXi/EjJKSZp4A==\n-----END CERTIFICATE-----\n",
   "GlobalSign Root CA - R2": "-----BEGIN CERTIFICATE-----\nMIIDujCCAqKgAwIBAgILBAAAAAABD4Ym5g0wDQYJKoZIhvcNAQEFBQAwTDEgMB4GA1UECxMX\nR2xvYmFsU2lnbiBSb290IENBIC0gUjIxEzARBgNVBAoTCkdsb2JhbFNpZ24xEzARBgNVBAMT\nCkdsb2JhbFNpZ24wHhcNMDYxMjE1MDgwMDAwWhcNMjExMjE1MDgwMDAwWjBMMSAwHgYDVQQL\nExdHbG9iYWxTaWduIFJvb3QgQ0EgLSBSMjETMBEGA1UEChMKR2xvYmFsU2lnbjETMBEGA1UE\nAxMKR2xvYmFsU2lnbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKbPJA6+Lm8o\nmUVCxKs+IVSbC9N/hHD6ErPLv4dfxn+G07IwXNb9rfF73OX4YJYJkhD10FPe+3t+c4isUoh7\nSqbKSaZeqKeMWhG8eoLrvozps6yWJQeXSpkqBy+0Hne/ig+1AnwblrjFuTosvNYSuetZfeLQ\nBoZfXklqtTleiDTsvHgMCJiEbKjNS7SgfQx5TfC4LcshytVsW33hoCmEofnTlEnLJGKRILzd\nC9XZzPnqJworc5HGnRusyMvo4KD0L5CLTfuwNhv2GXqF4G3yYROIXJ/gkwpRl4pazq+r1feq\nCapgvdzZX99yqWATXgAByUr6P6TqBwMhAo6CygPCm48CAwEAAaOBnDCBmTAOBgNVHQ8BAf8E\nBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUm+IHV2ccHsBqBt5ZtJot39wZhi4w\nNgYDVR0fBC8wLTAroCmgJ4YlaHR0cDovL2NybC5nbG9iYWxzaWduLm5ldC9yb290LXIyLmNy\nbDAfBgNVHSMEGDAWgBSb4gdXZxwewGoG3lm0mi3f3BmGLjANBgkqhkiG9w0BAQUFAAOCAQEA\nmYFThxxol4aR7OBKuEQLq4GsJ0/WwbgcQ3izDJr86iw8bmEbTUsp9Z8FHSbBuOmDAGJFtqkI\nk7mpM0sYmsL4h4hO291xNBrBVNpGP+DTKqttVCL1OmLNIG+6KYnX3ZHu01yiPqFbQfXf5WRD\nLenVOavSot+3i9DAgBkcRcAtjOj4LaR0VknFBbVPFd5uRHg5h6h+u/N5GJG79G+dwfCMNYxd\nAfvDbbnvRG15RjF+Cv6pgsH/76tuIMRQyV+dTZsXjAzlAcmgQWpzU/qlULRuJQ/7TBj0/VLZ\njmmx6BEP3ojY+x1J96relc8geMJgEtslQIxq/H5COEBkEveegeGTLg==\n-----END CERTIFICATE-----\n",
@@ -99455,36 +99451,36 @@ UChar.udata={
 
 },{}],387:[function(require,module,exports){
 module.exports={
-  "name": "bitcore-wallet-client-dash",
-  "description": "Client for bitcore-wallet-service-dash",
+  "name": "bitcore-wallet-client-terracoin",
+  "description": "Client for bitcore-wallet-service-terracoin",
   "author": "BitPay Inc",
   "version": "5.1.2",
   "license": "MIT",
   "keywords": [
-    "dash",
+    "terracoin",
     "copay-dash",
     "multisig",
     "wallet",
     "client",
-    "bitcore-dash",
+    "bitcore-terracoin",
     "BWS",
     "BWC"
   ],
   "engine": "node >= 0.12.0",
   "main": "index.js",
   "repository": {
-    "url": "git+ssh://git@github.com/dashevo/bitcore-wallet-client-dash.git",
+    "url": "git+ssh://git@github.com/TheSin-/bitcore-wallet-client-terracoin.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/bitcore-wallet-client-dash/issues"
+    "url": "https://github.com/TheSin-/bitcore-wallet-client-terracoin/issues"
   },
   "dependencies": {
     "async": "^0.9.0",
     "bip38": "^1.3.0",
-    "bitcore-lib-dash": "^0.14.3",
-    "bitcore-mnemonic-dash": "^1.2.3",
-    "bitcore-payment-protocol-dash": "github:dashpay/bitcore-payment-protocol-dash#master_v1.2.2",
+    "bitcore-lib-terracoin": "^0.14.3",
+    "bitcore-mnemonic-terracoin": "^1.2.3",
+    "bitcore-payment-protocol-terracoin": "github:TheSin-/bitcore-payment-protocol-terracoin#master_v1.2.2",
     "json-stable-stringify": "^1.0.0",
     "lodash": "^3.3.1",
     "preconditions": "^1.0.8",
@@ -99492,7 +99488,7 @@ module.exports={
     "superagent": "^3.4.1"
   },
   "devDependencies": {
-    "bitcore-wallet-service-dash": "^1.18.0",
+    "bitcore-wallet-service-terracoin": "^1.18.0",
     "browserify": "^13.1.0",
     "chai": "^1.9.1",
     "coveralls": "^2.11.2",
@@ -99518,7 +99514,7 @@ module.exports={
     "Ivan Socolsky <ivan@bitpay.com>",
     "Matias Alejo Garcia <ematiu@gmail.com>"
   ],
-  "homepage": "https://github.com/dashevo/bitcore-wallet-client-dash#readme",
+  "homepage": "https://github.com/TheSin-/bitcore-wallet-client-terracoin#readme",
   "directories": {
     "test": "test"
   }
