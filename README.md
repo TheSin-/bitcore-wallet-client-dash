@@ -1,8 +1,8 @@
 # Bitcore-Terracoin Wallet Client
 
 [![NPM Package](https://img.shields.io/npm/v/bitcore-wallet-client-terracoin.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-wallet-client-terracoin)
-[![Build Status](https://img.shields.io/travis/terracoin/bitcore-wallet-client-terracoin.svg?branch=master&style=flat-square)](https://travis-ci.org/terracoin/bitcore-wallet-client-terracoin)
-[![Coverage Status](https://coveralls.io/repos/terracoin/bitcore-wallet-client-terracoin/badge.svg)](https://coveralls.io/r/terracoin/bitcore-wallet-client-terracoin)
+[![Build Status](https://img.shields.io/travis/TheSin-/bitcore-wallet-client-terracoin.svg?branch=master&style=flat-square)](https://travis-ci.org/TheSin-/bitcore-wallet-client-terracoin)
+[![Coverage Status](https://coveralls.io/repos/TheSin-/bitcore-wallet-client-terracoin/badge.svg)](https://coveralls.io/r/TheSin-/bitcore-wallet-client-terracoin)
 
 The *official* client library for [bitcore-wallet-service-terracoin] (https://github.com/TheSin-/bitcore-wallet-service-terracoin).
 
