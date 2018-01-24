@@ -36,7 +36,7 @@
     "superagent": "^3.4.1"
   },
   "devDependencies": {
-    "bitcore-wallet-service-terracoin": "^1.18.0",
+    "bitcore-wallet-service-terracoin": "TheSin-/bitcore-wallet-service-terracoin",
     "browserify": "^13.1.0",
     "chai": "^1.9.1",
     "coveralls": "^2.11.2",
