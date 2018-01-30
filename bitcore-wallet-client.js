@@ -2559,7 +2559,7 @@ Constants.PATHS = {
 Constants.BIP45_SHARED_INDEX = 0x80000000 - 1;
 
 Constants.UNITS = {
-  btc: {
+  trc: {
     toSatoshis: 100000000,
     full: {
       maxDecimals: 8,
@@ -101448,7 +101448,7 @@ module.exports={
   "license": "MIT",
   "keywords": [
     "terracoin",
-    "copay-dash",
+    "copay-terracoin",
     "multisig",
     "wallet",
     "client",
