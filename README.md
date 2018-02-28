@@ -1,16 +1,16 @@
 # Bitcore-Terracoin Wallet Client
 
 [![NPM Package](https://img.shields.io/npm/v/bitcore-wallet-client-terracoin.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-wallet-client-terracoin)
-[![Build Status](https://img.shields.io/travis/TheSin-/bitcore-wallet-client-terracoin.svg?branch=master&style=flat-square)](https://travis-ci.org/TheSin-/bitcore-wallet-client-terracoin)
-[![Coverage Status](https://coveralls.io/repos/TheSin-/bitcore-wallet-client-terracoin/badge.svg)](https://coveralls.io/r/TheSin-/bitcore-wallet-client-terracoin)
+[![Build Status](https://img.shields.io/travis/terracoin/bitcore-wallet-client-terracoin.svg?branch=master&style=flat-square)](https://travis-ci.org/terracoin/bitcore-wallet-client-terracoin)
+[![Coverage Status](https://coveralls.io/repos/terracoin/bitcore-wallet-client-terracoin/badge.svg)](https://coveralls.io/r/terracoin/bitcore-wallet-client-terracoin)
 
-The *official* client library for [bitcore-wallet-service-terracoin] (https://github.com/TheSin-/bitcore-wallet-service-terracoin).
+The *official* client library for [bitcore-wallet-service-terracoin] (https://github.com/terracoin/bitcore-wallet-service-terracoin).
 
 ## Description
 
-This package communicates with BWS [bitcore-terracoin wallet service](https://github.com/TheSin-/bitcore-wallet-service-terracoin) using the REST API. All REST endpoints are wrapped as simple async methods. All relevant responses from BWS are checked independently by the peers, thus the importance of using this library when talking to a third party BWS instance.
+This package communicates with BWS [bitcore-terracoin wallet service](https://github.com/terracoin/bitcore-wallet-service-terracoin) using the REST API. All REST endpoints are wrapped as simple async methods. All relevant responses from BWS are checked independently by the peers, thus the importance of using this library when talking to a third party BWS instance.
 
-See [bitcore-wallet-terracoin] (https://github.com/TheSin-/bitcore-wallet-terracoin) for a simple CLI wallet implementation that relays on BWS and uses bitcore-wallet-client-terracoin.
+See [bitcore-wallet-terracoin] (https://github.com/terracoin/bitcore-wallet-terracoin) for a simple CLI wallet implementation that relays on BWS and uses bitcore-wallet-client-terracoin.
 
 ## Get Started
 
@@ -21,7 +21,7 @@ You can start using bitcore-wallet-client-terracoin in any of these two ways:
 
 ## Example
 
-Start your own local [bitcore-terracoin wallet service](https://github.com/TheSin-/bitcore-wallet-service-terracoin) instance. In this example we assume you have `bitcore-wallet-service-terracoin` running on your `localhost:3232`.
+Start your own local [bitcore-terracoin wallet service](https://github.com/terracoin/bitcore-wallet-service-terracoin) instance. In this example we assume you have `bitcore-wallet-service-terracoin` running on your `localhost:3232`.
 
 Then create two files `irene.js` and `tomas.js` with the content below:
 

@@ -76,18 +76,18 @@ describe('Credentials', function() {
       c.account.should.equal(8);
     });
     it('should derive compliant child', function() {
-      var c = Credentials.fromExtendedPrivateKey('tprv8ZgxMBicQKsPd8U9aBBJ5J2v8XMwKwZvf8qcu2gLK5FRrsrPeSgkEcNHqKx4zwv6cP536m68q2UD7wVM24zdSCpaJRmpowaeJTeVMXL5v5k', 0, 'BIP44');
+      var c = Credentials.fromExtendedPrivateKey('tprv8ZgxMBicQKsPe8dG56dwUudFBQTbwWgsDJrJiT7WpbDKqMqtAtAqRwRqezvMXcc2vKtKRkDU73PzyUGEZp6kwJiHGzYDRShvSn9P3NZwc4T', 0, 'BIP44');
       c.compliantDerivation.should.be.true;
       var xpk = c.getDerivedXPrivKey().toString();
-      xpk.should.equal('tprv8gXvQvjGt7oYCTRD3d4oeQr9B7JLuC2B6S854F4XWCQ4pr9NcjokH9kouWMAp1MJKy4Y8QLBgbmPtk3i7RegVzaWhWsnVPi4ZmykJXt4HeV');
+      xpk.should.equal('tprv8g9WqWMKhrQ5xxiMTt1jkaYmAjb2y6zwiVeyt6pUAXxSrstCvNbJVJ7mh3i84rv9yAXvzZyuEkybbMtuj9jETuDW8eKn5HRqcTcntnE3vSz');
     });
     it('should derive non-compliant child', function() {
-      var c = Credentials.fromExtendedPrivateKey('tprv8ZgxMBicQKsPd8U9aBBJ5J2v8XMwKwZvf8qcu2gLK5FRrsrPeSgkEcNHqKx4zwv6cP536m68q2UD7wVM24zdSCpaJRmpowaeJTeVMXL5v5k', 0, 'BIP44', {
+      var c = Credentials.fromExtendedPrivateKey('tprv8ZgxMBicQKsPe8dG56dwUudFBQTbwWgsDJrJiT7WpbDKqMqtAtAqRwRqezvMXcc2vKtKRkDU73PzyUGEZp6kwJiHGzYDRShvSn9P3NZwc4T', 0, 'BIP44', {
         nonCompliantDerivation: true
       });
       c.compliantDerivation.should.be.false;
       var xpk = c.getDerivedXPrivKey().toString();
-      xpk.should.equal('tprv8gSy16H5hQ1MKNHzZDzsktr4aaGQSHg4XYVEbfsEiGSBcgw4J8dEm8uf19FH4L9h6W47VBKtc3bbYyjb6HAm6QdyRLpB6fsA7bW19RZnby2');
+      xpk.should.equal('tprv8g9WqWMKhrQ5xxiMTt1jkaYmAjb2y6zwiVeyt6pUAXxSrstCvNbJVJ7mh3i84rv9yAXvzZyuEkybbMtuj9jETuDW8eKn5HRqcTcntnE3vSz');
     });
   });
 
@@ -116,13 +116,13 @@ describe('Credentials', function() {
       });
 
       it('should accept non-compliant derivation as a parameter when importing', function() {
-        var c = Credentials.fromExtendedPrivateKey('tprv8ZgxMBicQKsPd8U9aBBJ5J2v8XMwKwZvf8qcu2gLK5FRrsrPeSgkEcNHqKx4zwv6cP536m68q2UD7wVM24zdSCpaJRmpowaeJTeVMXL5v5k', 0, 'BIP44', {
+        var c = Credentials.fromExtendedPrivateKey('tprv8ZgxMBicQKsPe8dG56dwUudFBQTbwWgsDJrJiT7WpbDKqMqtAtAqRwRqezvMXcc2vKtKRkDU73PzyUGEZp6kwJiHGzYDRShvSn9P3NZwc4T', 0, 'BIP44', {
           nonCompliantDerivation: true
         });
-        c.xPrivKey.should.equal('tprv8ZgxMBicQKsPd8U9aBBJ5J2v8XMwKwZvf8qcu2gLK5FRrsrPeSgkEcNHqKx4zwv6cP536m68q2UD7wVM24zdSCpaJRmpowaeJTeVMXL5v5k');
+        c.xPrivKey.should.equal('tprv8ZgxMBicQKsPe8dG56dwUudFBQTbwWgsDJrJiT7WpbDKqMqtAtAqRwRqezvMXcc2vKtKRkDU73PzyUGEZp6kwJiHGzYDRShvSn9P3NZwc4T');
         c.compliantDerivation.should.be.false;
-        c.xPubKey.should.equal('tpubDD919WKKqmh2CqKnSsfUAJWB9bnLbcry6r61tBuY8YEaTBBpvXSpwdXXBGAB1n4JRFDC7ebo7if3psUAMpvQJUBe3LcjuMNA6Y4nP8U9SNg');
-        c.getDerivedXPrivKey().toString().should.equal("tprv8gSy16H5hQ1MKNHzZDzsktr4aaGQSHg4XYVEbfsEiGSBcgw4J8dEm8uf19FH4L9h6W47VBKtc3bbYyjb6HAm6QdyRLpB6fsA7bW19RZnby2");
+        c.xPubKey.should.equal('tpubDCqYyvPZrE5krRk9MXgL9zCsjm6y8SBrHoFmAcrmaokqhN8yYmQtfnjdsADJGYwXNkxGUbMfpVSCxrmrmMTrNhhARiJvFr6e7o69AcNwR91');
+        c.getDerivedXPrivKey().toString().should.equal("tprv8g9WqWMKhrQ5xxiMTt1jkaYmAjb2y6zwiVeyt6pUAXxSrstCvNbJVJ7mh3i84rv9yAXvzZyuEkybbMtuj9jETuDW8eKn5HRqcTcntnE3vSz");
       });
     });
   });
@@ -131,61 +131,61 @@ describe('Credentials', function() {
     it('Should create credentials from mnemonic BIP44', function() {
       var words = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
       var c = Credentials.fromMnemonic('livenet', words, '', 0, 'BIP44');
-      c.xPrivKey.should.equal('xprv9s21ZrQH143K3GJpoapnV8SFfukcVBSfeCficPSGfubmSFDxo1kuHnLisriDvSnRRuL2Qrg5ggqHKNVpxR86QEC8w35uxmGoggxtQTPvfUu');
+      c.xPrivKey.should.equal('xprv9s21ZrQH143K36Qi5XRScDaVd2Y8euseex3D7kT31Sp6aoTgwPt1YFSTHsbiqxwfiufhvijo1N6NrMJ4PKPAExsxocWncPwF9M65CY15Zai');
       c.network.should.equal('livenet');
       c.account.should.equal(0);
       c.derivationStrategy.should.equal('BIP44');
-      c.xPubKey.should.equal('xpub6BosfCnifzxcFwrSzQiqu2DBVTshkCXacvNsWGYJVVhhawA7d4R5WSWGFNbi8Aw6ZRc1brxMyWMzG3DSSSSoekkudhUd9yLb6qx39T9nMdj');
+      c.xPubKey.should.equal('xpub6CdxCUhLbMh7DaVy6G7HidWoeHFae191chdXCSEUV9tdLycoSuBZ5Feg72GZ1dR62MFbmy79gJNZMTPwEbEjPLmHd96Doqd7YBEfqcu1DsV');
       c.getBaseAddressDerivationPath().should.equal("m/44'/0'/0'");
     });
 
     it('Should create credentials from mnemonic BIP48', function() {
       var words = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
       var c = Credentials.fromMnemonic('livenet', words, '', 0, 'BIP48');
-      c.xPrivKey.should.equal('xprv9s21ZrQH143K3GJpoapnV8SFfukcVBSfeCficPSGfubmSFDxo1kuHnLisriDvSnRRuL2Qrg5ggqHKNVpxR86QEC8w35uxmGoggxtQTPvfUu');
+      c.xPrivKey.should.equal('xprv9s21ZrQH143K36Qi5XRScDaVd2Y8euseex3D7kT31Sp6aoTgwPt1YFSTHsbiqxwfiufhvijo1N6NrMJ4PKPAExsxocWncPwF9M65CY15Zai');
       c.network.should.equal('livenet');
       c.account.should.equal(0);
       c.derivationStrategy.should.equal('BIP48');
-      c.xPubKey.should.equal('xpub6CKZtUaK1YHpQbg6CLaGRmsMKLQB1iKzsvmxtyHD6X7gzLqCB2VNZYd1XCxrccQnE8hhDxtYbR1Sakkvisy2J4CcTxWeeGjmkasCoNS9vZm');
+      c.xPubKey.should.equal('xpub6DDhP9KXJsJuobRVXZa7cQSRWgFcHkD2RXa97a9qAijbwVXDR4fePS332JUMYMgBzuT97gvTiKJvSGNJyESKqMNmFMwFoL9mxHfY8QMNpPV');
       c.getBaseAddressDerivationPath().should.equal("m/48'/0'/0'");
     });
 
     it('Should create credentials from mnemonic account 1', function() {
       var words = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
       var c = Credentials.fromMnemonic('livenet', words, '', 1, 'BIP44');
-      c.xPrivKey.should.equal('xprv9s21ZrQH143K3GJpoapnV8SFfukcVBSfeCficPSGfubmSFDxo1kuHnLisriDvSnRRuL2Qrg5ggqHKNVpxR86QEC8w35uxmGoggxtQTPvfUu');
+      c.xPrivKey.should.equal('xprv9s21ZrQH143K36Qi5XRScDaVd2Y8euseex3D7kT31Sp6aoTgwPt1YFSTHsbiqxwfiufhvijo1N6NrMJ4PKPAExsxocWncPwF9M65CY15Zai');
       c.account.should.equal(1);
-      c.xPubKey.should.equal('xpub6BosfCnifzxcJJ1wYuntGJfF2zPJkDeG9ELNHcKNjezuea4tumswN9sH1psMdSVqCMoJC21Bv8usSeqSP4Sp1tLzW7aY59fGn9GCYzx5UTo');
+      c.xPubKey.should.equal('xpub6CdxCUhLbMh7H3C7qJhrfJzt3sHx3A1tSqr5PvM1wqfQdSaVJfHuMx3rRHzCe2sAVUJ9Dsvuxf29VR5peZw5BVeSPBhSH4SnxztoAGqNhQc');
       c.getBaseAddressDerivationPath().should.equal("m/44'/0'/1'");
     });
 
     it('Should create credentials from mnemonic with undefined/null passphrase', function() {
       var words = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
       var c = Credentials.fromMnemonic('livenet', words, undefined, 0, 'BIP44');
-      c.xPrivKey.should.equal('xprv9s21ZrQH143K3GJpoapnV8SFfukcVBSfeCficPSGfubmSFDxo1kuHnLisriDvSnRRuL2Qrg5ggqHKNVpxR86QEC8w35uxmGoggxtQTPvfUu');
+      c.xPrivKey.should.equal('xprv9s21ZrQH143K36Qi5XRScDaVd2Y8euseex3D7kT31Sp6aoTgwPt1YFSTHsbiqxwfiufhvijo1N6NrMJ4PKPAExsxocWncPwF9M65CY15Zai');
       c = Credentials.fromMnemonic('livenet', words, null, 0, 'BIP44');
-      c.xPrivKey.should.equal('xprv9s21ZrQH143K3GJpoapnV8SFfukcVBSfeCficPSGfubmSFDxo1kuHnLisriDvSnRRuL2Qrg5ggqHKNVpxR86QEC8w35uxmGoggxtQTPvfUu');
+      c.xPrivKey.should.equal('xprv9s21ZrQH143K36Qi5XRScDaVd2Y8euseex3D7kT31Sp6aoTgwPt1YFSTHsbiqxwfiufhvijo1N6NrMJ4PKPAExsxocWncPwF9M65CY15Zai');
     });
 
     it('Should create credentials from mnemonic and passphrase', function() {
       var words = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
       var c = Credentials.fromMnemonic('livenet', words, 'húngaro', 0, 'BIP44');
-      c.xPrivKey.should.equal('xprv9s21ZrQH143K2LkGEPHqW8w5vMJ3giizin94rFpSM5Ys5KhDaP7Hde3rEuzC7VpZDtNX643bJdvhHnkbhKMNmLx3Yi6H8WEsHBBox3qbpqq');
+      c.xPrivKey.should.equal('xprv9s21ZrQH143K26Wdx9p8ph7F9tFUZJrP8imQi4FpT3dqdRR4MaYTghn2weQqwGhzC3iUaQ5gd98hnpYT7krQF2EY5utEpCT3CbuSnT2WTDb');
     });
 
     it('Should create credentials from mnemonic and passphrase for testnet account 2', function() {
       var words = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
       var c = Credentials.fromMnemonic('testnet', words, 'húngaro', 2, 'BIP44');
-      c.xPrivKey.should.equal('tprv8ZgxMBicQKsPd9yntx9LfnZ5EUiFvEm14L4BigEtq43LrvSJZkT39PRJA69r7sCsbKuJ69fMTzWVkeJLpXhKaQDe5MJanrxvCGwEPnNxN85');
+      c.xPrivKey.should.equal('tprv8ZgxMBicQKsPcukAcifdzLjEU1fgnptPUGgXaUgGw28KR2A9LwtDCT9UrpaVwe6JZVFFaVhSnViWFg6CEyCM45W8cZ6YUZB67hesE7UJzxS');
       c.network.should.equal('testnet');
-      c.xPubKey.should.equal('tpubDCoAP4Ut9MXK5CakPFPudKAP4yCw6Xr7uzV2129v2LTa3eBoPoUGMqi2y3kmh83oRGX93m7EehB6LWan5GTSVD8yUnV5Jc7Kjzfa3Zsf8nE');
+      c.xPubKey.should.equal('tpubDCMeJY5EK7qVjvBfwccTYki8yDmVLZTssW3eQdYCXDz6yKv6CbrYT11ai5aenDnFkfbWSYtGynT8fkD2Qa4A15RjkTSScx4ZNojSotn5zYe');
       c.getBaseAddressDerivationPath().should.equal("m/44'/1'/2'");
     });
 
     it('Should create credentials from mnemonic (ES)', function() {
       var words = 'afirmar diseño hielo fideo etapa ogro cambio fideo toalla pomelo número buscar';
       var c = Credentials.fromMnemonic('livenet', words, '', 0, 'BIP44');
-      c.xPrivKey.should.equal('xprv9s21ZrQH143K3H3WtXCn9nHtpi7Fz1ZE9VJErWErhrGL4hV1cApFVo3t4aANoPF7ufcLLWqN168izu3xGQdLaGxXG2qYZF8wWQGNWnuSSon');
+      c.xPrivKey.should.equal('xprv9s21ZrQH143K2981nEvaXYEPJVJDTsUxpsxEK5weSt9otKw4YouFcqA7mQUNhd2tALH7bShXdZCAYXfAW5tLr4Y7SPctgSVwd8FQndLuoYX');
       c.network.should.equal('livenet');
     });
 
@@ -193,24 +193,24 @@ describe('Credentials', function() {
       it('Should create compliant base address derivation key from mnemonic', function() {
         var words = "shoulder sphere pull seven top much black copy labor dress depth unit";
         var c = Credentials.fromMnemonic('livenet', words, '', 0, 'BIP44');
-        c.xPrivKey.should.equal('xprv9s21ZrQH143K3WoNK8dVjQJpcXhqfwyuBTpuZdc1ZVa9yWW2i7TmM4TLyfPrSKXctQuLgbg3U1WJmodK9yWM26JWeuh2vhT6bmsPPie688n');
-        c.xPubKey.should.equal('xpub6DVMaW3r1CcZcsUazSHspjRfZZJzZG3N7GRL4DciY54Z8M4KmRSDrq2hd75VzxKZDXPu4EKiAwCGwiXMxec2pq6oVgtZYxQHSrgtxksWehx');
+        c.xPrivKey.should.equal('xprv9s21ZrQH143K3cu8rotoKq1KU1V2pYDQ8W2vjhmEGK94ijLL6qKNf3efGWMjoxbVJCvvywW4puKJpDcPDD43Xo3njepgxVUhpPNS1c6TYNT');
+        c.xPubKey.should.equal('xpub6CjbT1XgVKCVGhDCDdx2rUdtCDfPSYBW6N4nx3S46bjpsBP4cDhCNsFDeK1i1eyfL862fL5DgeveFPnyTjKAsiyZxK358naxUWozLXsJr2Z');
       });
 
       it('Should create compliant request key from mnemonic', function() {
         var words = "pool stomach bridge series powder mammal betray slogan pass roast neglect reunion";
         var c = Credentials.fromMnemonic('livenet', words, '', 0, 'BIP44');
-        c.xPrivKey.should.equal('xprv9s21ZrQH143K3ZMudFRXpEwftifDuJkjLKnCtk26pXhxQuK8bCnytJuUTGkfvaibnCxPQQ9xToUtDAZkJqjm3W62GBXXr7JwhiAz1XWgTUJ');
-        c.requestPrivKey.should.equal('7582efa9b71aefa831823592d753704cba9648b810b14b77ee078dfe8b730157');
+        c.xPrivKey.should.equal('xprv9s21ZrQH143K27BsCiU5Q8qrga5BnhqeNxhUxwL5SadiSa94KiJ35zUM1v4UN5Gt7wJ2qVTvNpY9bGU5ZmWehdqGqBzPuV5tFUWczLHcXkL');
+        c.requestPrivKey.should.equal('2df2fc373e19bb233e38027f831252cf4080262c0437b1e89b1d2033f36cae91');
       });
       it('should accept non-compliant derivation as a parameter when importing', function() {
         var c = Credentials.fromMnemonic('testnet', 'level unusual burger hole call main basic flee drama diary argue legal', '', 0, 'BIP44', {
           nonCompliantDerivation: true
         });
-        c.xPrivKey.should.equal('tprv8ZgxMBicQKsPd8U9aBBJ5J2v8XMwKwZvf8qcu2gLK5FRrsrPeSgkEcNHqKx4zwv6cP536m68q2UD7wVM24zdSCpaJRmpowaeJTeVMXL5v5k');
+        c.xPrivKey.should.equal('tprv8ZgxMBicQKsPe8dG56dwUudFBQTbwWgsDJrJiT7WpbDKqMqtAtAqRwRqezvMXcc2vKtKRkDU73PzyUGEZp6kwJiHGzYDRShvSn9P3NZwc4T');
         c.compliantDerivation.should.be.false;
-        c.xPubKey.should.equal('tpubDD919WKKqmh2CqKnSsfUAJWB9bnLbcry6r61tBuY8YEaTBBpvXSpwdXXBGAB1n4JRFDC7ebo7if3psUAMpvQJUBe3LcjuMNA6Y4nP8U9SNg');
-        c.getDerivedXPrivKey().toString().should.equal("tprv8gSy16H5hQ1MKNHzZDzsktr4aaGQSHg4XYVEbfsEiGSBcgw4J8dEm8uf19FH4L9h6W47VBKtc3bbYyjb6HAm6QdyRLpB6fsA7bW19RZnby2");
+        c.xPubKey.should.equal('tpubDCqYyvPZrE5krRk9MXgL9zCsjm6y8SBrHoFmAcrmaokqhN8yYmQtfnjdsADJGYwXNkxGUbMfpVSCxrmrmMTrNhhARiJvFr6e7o69AcNwR91');
+        c.getDerivedXPrivKey().toString().should.equal("tprv8g9WqWMKhrQ5xxiMTt1jkaYmAjb2y6zwiVeyt6pUAXxSrstCvNbJVJ7mh3i84rv9yAXvzZyuEkybbMtuj9jETuDW8eKn5HRqcTcntnE3vSz");
       });
     });
   });

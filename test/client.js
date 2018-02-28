@@ -1438,7 +1438,7 @@ describe('client API', function() {
             should.not.exist(err);
             should.exist(clients[0].getMnemonic());
             words.should.be.equal(clients[0].getMnemonic());
-            clients[0].credentials.xPrivKey.should.equal('xprv9s21ZrQH143K4X2frJxRmGsmef9UfXhmfL4hdTGLm5ruSX46gekuSTspJX63d5nEi9q2wqUgg4KZ4yhSPy13CzVezAH6t6gCox1DN2hXV3L')
+            clients[0].credentials.xPrivKey.should.equal('xprv9s21ZrQH143K2fHTMqvLBeSWG8jNXjsoHwbFTMr5BVUGQbHFXFP9UuLFzHKJYPpeUxh6YdGHXPDWECsMR9jnb5yddTCu6s3qNjxH4W7iGNw')
             done();
           });
         });
@@ -1457,7 +1457,7 @@ describe('client API', function() {
             should.not.exist(err);
             should.exist(clients[0].getMnemonic());
             words.should.be.equal(clients[0].getMnemonic());
-            clients[0].credentials.xPrivKey.should.equal('xprv9s21ZrQH143K4X2frJxRmGsmef9UfXhmfL4hdTGLm5ruSX46gekuSTspJX63d5nEi9q2wqUgg4KZ4yhSPy13CzVezAH6t6gCox1DN2hXV3L')
+            clients[0].credentials.xPrivKey.should.equal('xprv9s21ZrQH143K2fHTMqvLBeSWG8jNXjsoHwbFTMr5BVUGQbHFXFP9UuLFzHKJYPpeUxh6YdGHXPDWECsMR9jnb5yddTCu6s3qNjxH4W7iGNw')
             done();
           });
         });
@@ -3733,8 +3733,8 @@ describe('client API', function() {
             network: 'livenet',
             nonCompliantDerivation: true,
           });
-          clients[0].credentials.xPrivKey.toString().should.equal('xprv9s21ZrQH143K3E71Wm5nrxuMdqCTMG6AM5Xyp4dJ3ZkUj2gEpfifT5Hc1cfqnycKooRpzoH4gjmAKDmGGaH2k2cSe29EcQSarveq6STBZZW');
-          clients[0].credentials.xPubKey.toString().should.equal('xpub6CLj2x8T5zwngq3Uq42PbXbAXnyaUtsANEZaBjAPNBn5PbhSJM29DM5nhrdJDNpEy9X3n5sQhk6CNA7PKTp48Xvq3QFdiYAXAcaWEJ6Xmug');
+          clients[0].credentials.xPrivKey.toString().should.equal('xprv9s21ZrQH143K39Rf7wU3WAfhT7AdUfqPY1VHHjjm2wR8TMtq23BiPY8d3hPUtrVjbkugwJAYU6wqu2mvBNweMfWAoGqYShvivUyPHa42he9');
+          clients[0].credentials.xPubKey.toString().should.equal('xpub6ByjxHgHBytFJ7AVBLATW277KicSASPvUN763RNseHLL4FvQ5ff5XP84CrVSJZWYaKeQe7pgn9jnzt5JHbgHVqija5ohwjyQFNURgUcHLHS');
           setup(function() {
             importedClient = helpers.newClient(app);
             var spy = sinon.spy(importedClient, 'openWallet');
@@ -3850,7 +3850,7 @@ describe('client API', function() {
         }, function(err) {
           err.should.be.an.instanceOf(Errors.NOT_AUTHORIZED);
           importedClient.mnemonicHasPassphrase().should.equal(false);
-          importedClient.credentials.xPrivKey.should.equal('tprv8ZgxMBicQKsPdTYGTn3cPvTJJuuKHCYbfH1fbu4ceZ5tzYrcjYMKY1JfZiEFDDpEXWquSpX6jRsEoVPoaSw82tQ1Wn1U3K1bQDZBj3UGuEG');
+          importedClient.credentials.xPrivKey.should.equal('tprv8ZgxMBicQKsPe6yynwqa3L2ZS1gXLGMXwpsSQRCe4V7QPEzWYiTeiyguNaJbjWpQsLHtaV5xspQ1615uAf4y43fvMHbZnjeCnrbBpd43XVV');
           done();
         });
       });
@@ -3863,7 +3863,7 @@ describe('client API', function() {
         }, function(err) {
           err.should.be.an.instanceOf(Errors.NOT_AUTHORIZED);
           importedClient.mnemonicHasPassphrase().should.equal(true);
-          importedClient.credentials.xPrivKey.should.equal('tprv8ZgxMBicQKsPdVijVxEu7gVDi86PUZqbCe7xTGLwVXwZpsG3HuxLDjXL3DXRSaaNymMD7gRpXimxnUDYa5N7pLTKLQymdSotrb4co7Nwrs7');
+          importedClient.credentials.xPrivKey.should.equal('tprv8ZgxMBicQKsPeLDKyBF9TaDxXmQgfCE2WTouTmuhCv5oCDsk1ens3XzGcU4rAeQzgP6Mxd1iKMVv8zjeq7trnY86nAriKgSqGFdtCtk5BXL');
           done();
         });
       });

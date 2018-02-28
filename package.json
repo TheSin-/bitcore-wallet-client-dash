@@ -17,18 +17,18 @@
   "engine": "node >= 0.12.0",
   "main": "index.js",
   "repository": {
-    "url": "git+ssh://git@github.com/TheSin-/bitcore-wallet-client-terracoin.git",
+    "url": "git+ssh://git@github.com/terracoin/bitcore-wallet-client-terracoin.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/TheSin-/bitcore-wallet-client-terracoin/issues"
+    "url": "https://github.com/terracoin/bitcore-wallet-client-terracoin/issues"
   },
   "dependencies": {
     "async": "^0.9.0",
     "bip38": "^1.3.0",
-    "bitcore-lib-terracoin": "TheSin-/bitcore-lib-terracoin",
-    "bitcore-mnemonic-terracoin": "TheSin-/bitcore-mnemonic-terracoin",
-    "bitcore-payment-protocol-terracoin": "github:TheSin-/bitcore-payment-protocol-terracoin",
+    "bitcore-lib-terracoin": "^0.15.2",
+    "bitcore-mnemonic-terracoin": "^1.5.0",
+    "bitcore-payment-protocol-terracoin": "^1.5.0",
     "json-stable-stringify": "^1.0.0",
     "lodash": "^3.3.1",
     "preconditions": "^1.0.8",
@@ -36,7 +36,9 @@
     "superagent": "^3.4.1"
   },
   "devDependencies": {
-    "bitcore-wallet-service-terracoin": "TheSin-/bitcore-wallet-service-terracoin",
+    "bitcore-build-terracoin": "terracoin/bitcore-build-terracoin",
+    "gulp": "^3.8.10",
+    "bitcore-wallet-service-terracoin": "^1.18.0",
     "browserify": "^13.1.0",
     "chai": "^1.9.1",
     "coveralls": "^2.11.2",
@@ -51,6 +53,7 @@
     "uuid": "^2.0.1"
   },
   "scripts": {
+    "build": "gulp",
     "start": "node app.js",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha -- --reporter spec test",
     "test": "mocha",
@@ -62,7 +65,7 @@
     "Ivan Socolsky <ivan@bitpay.com>",
     "Matias Alejo Garcia <ematiu@gmail.com>"
   ],
-  "homepage": "https://github.com/TheSin-/bitcore-wallet-client-terracoin#readme",
+  "homepage": "https://github.com/terracoin/bitcore-wallet-client-terracoin#readme",
   "directories": {
     "test": "test"
   }

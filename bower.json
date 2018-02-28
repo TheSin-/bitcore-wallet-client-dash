@@ -2,7 +2,7 @@
   "name": "bitcore-wallet-client-terracoin",
   "main": "index.js",
   "version": "2.1.1",
-  "homepage": "https://github.com/TheSin-/bitcore-wallet-client-terracoin",
+  "homepage": "https://github.com/terracoin/bitcore-wallet-client-terracoin",
   "authors": ["BitPay Inc"],
   "description": "Client for bitcore-wallet-service-terracoin",
   "keywords": [
