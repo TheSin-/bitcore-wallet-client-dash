@@ -321,12 +321,12 @@ API.prototype.validateKeyDerivation = function(opts, cb) {
     var words = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
     var xpriv = Mnemonic(words).toHDPrivateKey();
 
-    if (xpriv.toString() != 'xprv9s21ZrQH143K3GJpoapnV8SFfukcVBSfeCficPSGfubmSFDxo1kuHnLisriDvSnRRuL2Qrg5ggqHKNVpxR86QEC8w35uxmGoggxtQTPvfUu') return false;
+    if (xpriv.toString() != 'xprv9s21ZrQH143K36Qi5XRScDaVd2Y8euseex3D7kT31Sp6aoTgwPt1YFSTHsbiqxwfiufhvijo1N6NrMJ4PKPAExsxocWncPwF9M65CY15Zai') return false;
 
     xpriv = xpriv.deriveChild("m/44'/0'/0'");
-    if (xpriv.toString() != 'xprv9xpXFhFpqdQK3TmytPBqXtGSwS3DLjojFhTGht8gwAAii8py5X6pxeBnQ6ehJiyJ6nDjWGJfZ95WxByFXVkDxHXrqu53WCRGypk2ttuqncb') return false;
+    if (xpriv.toString() != 'xprv9yebnyASkz8p16RVzEaHMVa56FR6EYRAFUhvQ3prvpMeUBHeuMsJXTLCFkbjTKcCbfADANUqNgYZEM4JQBZAHgVEEijHRfeoAhMBHN7XkUQ') return false;
 
-    var xpub = Bitcore.HDPublicKey.fromString('xpub6BosfCnifzxcFwrSzQiqu2DBVTshkCXacvNsWGYJVVhhawA7d4R5WSWGFNbi8Aw6ZRc1brxMyWMzG3DSSSSoekkudhUd9yLb6qx39T9nMdj');
+    var xpub = Bitcore.HDPublicKey.fromString('xpub6CdxCUhLbMh7DaVy6G7HidWoeHFae191chdXCSEUV9tdLycoSuBZ5Feg72GZ1dR62MFbmy79gJNZMTPwEbEjPLmHd96Doqd7YBEfqcu1DsV');
     return testMessageSigning(xpriv, xpub);
   };
 
@@ -70679,6 +70679,8 @@ module.exports={
     "superagent": "^3.4.1"
   },
   "devDependencies": {
+    "bitcore-build-terracoin": "terracoin/bitcore-build-terracoin",
+    "gulp": "^3.8.10",
     "bitcore-wallet-service-terracoin": "^1.18.0",
     "browserify": "^13.1.0",
     "chai": "^1.9.1",
@@ -70694,6 +70696,7 @@ module.exports={
     "uuid": "^2.0.1"
   },
   "scripts": {
+    "build": "gulp",
     "start": "node app.js",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha -- --reporter spec test",
     "test": "mocha",
