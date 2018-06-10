@@ -3734,7 +3734,7 @@ describe('client API', function() {
             nonCompliantDerivation: true,
           });
           clients[0].credentials.xPrivKey.toString().should.equal('xprv9s21ZrQH143K39Rf7wU3WAfhT7AdUfqPY1VHHjjm2wR8TMtq23BiPY8d3hPUtrVjbkugwJAYU6wqu2mvBNweMfWAoGqYShvivUyPHa42he9');
-          clients[0].credentials.xPubKey.toString().should.equal('xpub6ByjxHgHBytFJ7AVBLATW277KicSASPvUN763RNseHLL4FvQ5ff5XP84CrVSJZWYaKeQe7pgn9jnzt5JHbgHVqija5ohwjyQFNURgUcHLHS');
+          clients[0].credentials.xPubKey.toString().should.equal('xpub6DDkATphxBYmPhmtA13Sv2WRq36TsCEDkjFfvrFCi6Bi3CpLVdjwjT2pBsEKG7Tm2CbTsxrSZF5UeSrYGe4786RV5cXaH4krbBinwH19moD');
           setup(function() {
             importedClient = helpers.newClient(app);
             var spy = sinon.spy(importedClient, 'openWallet');
