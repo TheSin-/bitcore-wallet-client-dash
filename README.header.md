@@ -32,7 +32,7 @@ var Client = require('bitcore-wallet-client-terracoin');
 
 
 var fs = require('fs');
-var BWS_INSTANCE_URL = 'https://bws.terracoin.io/api'
+var BWS_INSTANCE_URL = 'https://bws.terracoin.io/bws/api'
 
 var client = new Client({
   baseUrl: BWS_INSTANCE_URL,
@@ -58,7 +58,7 @@ var Client = require('bitcore-wallet-client-terracoin');
 
 
 var fs = require('fs');
-var BWS_INSTANCE_URL = 'https://bws.terracoin.io/api'
+var BWS_INSTANCE_URL = 'https://bws.terracoin.io/bws/api'
 
 var secret = process.argv[2];
 if (!secret) {
